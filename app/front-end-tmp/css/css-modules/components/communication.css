@@ -1,0 +1,96 @@
+.communication {
+    width: 100%;
+    margin-bottom: 0.4rem;
+    background-color: $mainBlue;
+
+    &__header {
+        padding: 0 0.375rem 0;
+        @mixin fontPoppins;
+
+        &__h3 {
+            color: #f14036;
+            margin: 0;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.33);
+
+            &--centered {
+                text-align: center;
+            }
+        }
+    }
+
+    &__form {
+        padding-top: 0.7rem;
+        @mixin fontPoppins;
+
+        &__input {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.33);
+            margin-bottom: 0.435rem;
+            background: $mainWhite;
+        }
+
+        &__text-area {
+            display: block;
+            box-sizing: border-box;
+            width: 100%;
+            padding: 8px;
+            border-radius: 6px;
+            border: 2px solid #fff;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.33);
+            margin-bottom: 0.435rem;
+            background: $mainWhite;
+        
+        }
+
+        &__btn {
+            @mixin orangeGradientBackColor;
+            color: white;
+            font-weight: bold;
+            font-size: 1.05rem;
+            box-shadow: 0 1px 1px rgba(0,0,0,0.33);
+        }
+    }
+}
+
+@media (min-width: 419px) {
+    .communication {
+        &__header {
+
+            &__h3 {
+                font-size: 1.4rem;
+            }
+        }
+    }    
+}
+
+@media (min-width: 768px) {
+    .communication {
+        border-radius: 0.2rem;
+        margin-bottom: 0.9375rem;
+
+        &__header {
+            padding: 0.375rem 0.375rem 0;
+            margin-bottom: -0.4rem;
+
+            &__h3 {
+                font-size: 1.5rem;
+            }
+        }
+
+        &__form {
+            &__input {
+                margin-bottom: 0.7rem;
+            }
+
+            &__text-area {
+                margin-bottom: 0.7rem;
+            }
+        }    
+    }
+}
+

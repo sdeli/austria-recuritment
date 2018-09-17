@@ -1,0 +1,11 @@
+.widgets {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+}
+
+@media (min-width: 768px) {
+    .widgets {
+        padding-top: 0.9375rem;
+        padding-bottom: 0.9375rem;
+    }
+}    

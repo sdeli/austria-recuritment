@@ -1,0 +1,55 @@
+.footer {
+    @mixin orangeGradientBackColor;
+    color: $textGrey;
+    padding-top: 0.4375rem;
+
+    &__info-item {
+        margin-bottom: 1rem;
+        word-wrap: break-word;
+        @mixin fontPoppins;
+
+        &__img {
+            width: 100%;
+            max-width: 300px;
+        }
+
+        &__title {
+            text-shadow: 1px -1px #795548;
+            margin-top: 0;
+            margin-bottom: 0.625rem;
+        }
+
+        &__ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 0;
+            margin-bottom: 0;
+
+            strong {
+                text-shadow: 1px -1px #795548;
+                text-shadow: 1px -1px #795548;
+            }
+
+            &__a {
+                text-decoration: none;
+                color: inherit;
+                transition: all 0.3s ease;
+            }
+
+            &__a:hover {
+                text-shadow: 2px -1px 1px #fbef84;
+                font-style: italic;
+            }
+        }
+    }
+}
+
+@media (min-width: 419px) {
+    .footer {
+        padding-top: 0.9375rem;
+    }
+}
+
+/*
+a:link { color: blue; }
+a:visited { color: purple; }*/

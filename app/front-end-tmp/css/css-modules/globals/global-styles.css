@@ -1,0 +1,17 @@
+@font-face {
+    font-family: myFirstFont;
+    src: url(sansation_light.woff);
+}
+
+div {
+    font-family: myFirstFont;
+}
+
+body {
+    background-color: $mainBlue;
+    position: relative;
+}
+
+header {
+    position: relative;
+}

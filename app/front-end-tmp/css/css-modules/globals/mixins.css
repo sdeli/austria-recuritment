@@ -1,0 +1,24 @@
+/*@mixin orangeGradientBackColor*/
+@define-mixin orangeGradientBackColor{ 
+    background: orange;
+    background: #ef4136; /* Old browsers */
+    background: -moz-linear-gradient(left, #ef4136 0%, #f17329 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left, #ef4136 0%,#f17329 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right, #ef4136 0%,#f17329 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4136', endColorstr='#f17329',GradientType=1 ); /* IE6-9 */
+
+}
+
+@define-mixin orangeGradientColor{ 
+    color: orange;
+    color: #ef4136; /* Old browsers */
+    color: -moz-linear-gradient(left, #ef4136 0%, #f17329 100%); /* FF3.6-15 */
+    color: -webkit-linear-gradient(left, #ef4136 0%,#f17329 100%); /* Chrome10-25,Safari5.1-6 */
+    color: linear-gradient(to right, #ef4136 0%,#f17329 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ef4136', endColorstr='#f17329',GradientType=1 ); /* IE6-9 */
+}
+
+
+@define-mixin fontPoppins{ 
+    font-family: 'Poppins', sans-serif;
+}

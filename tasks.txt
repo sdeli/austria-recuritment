@@ -1,0 +1,48 @@
+1. build main page view:
+        build components:
+            duppla hossz jumbo
+            head:
+                jumbo => need new picture
+                logo
+                slogen
+                logo contact info stripes
+                navbar / hamburger
+                    navbar stripe, navbar hamburger + full width dropdown
+            post
+                create the bump
+                insert vectors
+            footer => display links for related pages
+            question us => finished
+            modal to apply
+                modal html -
+                    logo ot bottom
+                    slogen-link to application form
+                    javascript
+
+2. build apply page view
+        build grid 
+        get head
+        get footer
+
+        build components
+            application form
+
+3. Contact Us Page
+        build grid
+        get head
+        get footer
+        get question us
+
+4. Backend
+    create templates
+        separate out bem elements into components from:
+            main-page
+            apply page
+            contact page
+
+    create routing in express, insert data into templates
+        main-page
+        apply page
+        contact page
+
+5. ajax stuff for elements

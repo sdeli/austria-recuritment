@@ -1,0 +1,14 @@
+@import url("css-modules/globals/normailize.css");
+@import url("css-modules/globals/manhattan.css");
+@import url("css-modules/globals/variables.css");
+@import url("css-modules/globals/mixins.css");
+@import url("css-modules/globals/global-styles.css");
+@import url("css-modules/components/jumbotron.css");
+@import url("css-modules/components/slogen.css");
+@import url("css-modules/components/main-info-area-.css");
+@import url("css-modules/components/info-feed.css");
+@import url("css-modules/components/widgets.css");
+@import url("css-modules/components/communication.css");
+@import url("css-modules/components/post.css");
+@import url("css-modules/components/footer.css");
+@import url("css-modules/components/modal.css");
