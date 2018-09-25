@@ -1,0 +1,37 @@
+.post__container__body__vector {
+    margin-bottom: 0px;
+    overflow: visible;
+    float: right;
+    margin-left: 10px;
+    height: 186px;
+
+    &__chef-n {
+        background: url(../img/thumbs/full-body-vectors.png) no-repeat;
+        width: 107px;
+        height: 258px;
+        background-position: -410px 0px;
+    }
+
+    &__chef-lady-n {
+        background: url(../img/thumbs/full-body-vectors.png) no-repeat;
+        width: 106px;
+        height: 261px;
+        background-position: -299px 0px;
+    }
+
+    &__waiter-n {
+        background: url(../img/thumbs/full-body-vectors.png) no-repeat;
+        width: 125px;
+        height: 264px;
+        background-position: 0 0px;
+    }
+}
+@media (min-width: 768px) {
+    .post__container__body__vector__chef-n--higher {
+        margin-top: -10px;
+    }
+
+    .post__container__body__vector__waiter-n--higher {
+        margin-top: -10px;
+    }
+}

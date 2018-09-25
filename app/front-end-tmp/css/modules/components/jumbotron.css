@@ -1,0 +1,33 @@
+.jumbotron {
+    position: relative;
+    overflow: hidden;
+	width: 100%;
+	
+	&__pictures {
+	    width: 100%;
+
+	    &__img {
+	        width: 100%;
+	        display: block;
+	    }
+	}
+}
+
+@media(min-width: 419px) {
+	.jumbotron {
+		max-height: 13.75rem;
+	}
+}
+
+@media(min-width: 576px) {
+	.jumbotron {
+		max-height: 23.0625rem;
+	}
+}
+
+@media (min-width: 647px) {
+    .jumbotron {
+       max-height: unset;
+       height: 21.1875rem;
+    }    
+}

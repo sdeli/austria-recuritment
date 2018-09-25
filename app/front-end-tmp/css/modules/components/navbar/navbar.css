@@ -1,0 +1,149 @@
+@import url("moduls/navbar-mixins.css");
+@import url("moduls/navbar-drop-down-btn.css");
+@import url("moduls/navbar-drop-down-close-btn.css");
+@import url("moduls/navbar-positioning.css");
+
+.navbar {
+	/*display: none;*/
+	height: 0;
+	overflow: visible;
+	z-index: 10;
+	width: 100%;
+	box-sizing: border-box;
+
+	&__position {
+		z-index: 1;
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		box-sizing: border-box;
+		padding: 5px;
+		transform: translateY(-100%);
+
+		&__menu {
+			position: relative;
+			max-width: 280px;
+			left: 50%;
+			transform: translateX(-50%);
+
+			> ul {
+				position: relative;
+				display: inline;
+				z-index: 2;
+				margin: 0;
+				padding: 0;
+			}
+
+			&__background {
+				display: none;
+			}
+
+			&__item {
+				list-style: none;
+
+				> a {
+					text-decoration: none;
+		    		@mixin mobileNavBtnStyle;
+				}	
+			}
+
+			&__drop-down {
+				list-style: none;
+
+	    		&__name {
+		    		@mixin mobileNavBtnStyle;
+	    		}
+
+				&__list {
+					margin: 0;
+					padding: 0;
+				}
+			}
+		}
+	}
+}
+/*injavascript background, z-index*/
+
+@media(min-width: 419px) {
+	/*.navbar {
+		height: 100px;
+		background: red;
+	}*/
+	.navbar__position__menu__drop-down__name,
+	.navbar__position__menu__drop-down__list__item,
+	.navbar__position__menu__item > a {
+		font-size: 1.2rem;
+	}
+}
+
+@media(min-width: 576px) {
+	.navbar {
+		position: absolute;
+		top: 0;
+		left: 0;
+		padding: 0;
+		height: unset;
+
+		&__position {
+			position: relative;
+			padding: 0;
+
+			&__menu {
+				max-width: unset;
+				width: 100%;
+				left: unset;
+				transform: unset;
+
+
+				> ul {
+					display: inline-block;
+					left: 50%;
+					transform: translateX(-50%);
+				}
+
+				&__background {
+					display: block;
+					background: black;
+					opacity: 0.5;
+					z-index: 1;
+					position: absolute;
+					width: 100%;
+					height: 100%;
+				}
+
+				&__item {
+					display: inline-block;
+
+					> a	{
+						@mixin desktopNavBtnStyle;
+					}
+				}
+				
+				&__drop-down {
+					display: inline-block;
+
+					&__name {
+						@mixin desktopNavBtnStyle;
+	    			}
+					
+					&__list {
+							display: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media(min-width: 768px) {
+	.navbar__position__menu__item > a {
+		padding: 0.525rem 0.5375rem;
+		font-size: 1.2rem;
+	}
+				
+	.navbar__position__menu__drop-down__name {
+		padding: 0.525rem 0.5375rem;
+		font-size: 1.2rem;
+	}
+}

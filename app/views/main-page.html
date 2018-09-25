@@ -7,18 +7,86 @@
     <link rel="stylesheet" href="/public/css/home-page-bundled.css">
 </head>
 <body>
-    <header>
-        <picture class="jumbotron">
-                <source srcset="/public/img/jumbotron/jumbo-1200.jpg" media="(min-width: 992px)">
-                <source srcset="/public/img/jumbotron/jumbo-992.jpg" media="(min-width: 768px)">
-                <source srcset="/public/img/jumbotron/jumbo-768.jpg" media="(min-width: 576px)">
-                <source srcset="/public/img/jumbotron/jumbo-576.jpg" media="(min-width: 419px)" >
-                <img class="jumbotron__img" srcset="/public/img/jumbotron/jumbo-419.jpg">
+    <nav class="navbar">
+        <div class="navbar__hamburger">
+            <div class="navbar__hamburger__relative-cont">
+                <div class="navbar__hamburger__relative-cont__background"></div>
+                <div class="navbar__hamburger__relative-cont__icon">
+                    <div class="navbar__hamburger__relative-cont__icon__bar-middle"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="navbar__position">
+            <div class="navbar__position__menu">
+                <div class="navbar__position__menu__background"></div>
+                <div class="navbar__position__menu__close-btn">
+                    <div class="navbar__position__menu__close-btn__icon"></div>
+                </div>
+                <ul>
+                    <li class="navbar__position__menu__item"><a href="#">Jelentkezes</a></li>
+                    <li class="navbar__position__menu__item"><a href="#">Blog</a></li>
+                    <li class="navbar__position__menu__drop-down">
+                        <span class="navbar__position__menu__drop-down__name">Articles</span>
+                        <ul class="navbar__position__menu__drop-down__list">
+                            <li class="navbar__position__menu__item"><a href="#">Cikk 1</a></li>
+                            <li class="navbar__position__menu__item"><a href="#">Cikk 2</a></li>
+                            <li class="navbar__position__menu__item"><a href="#">Cikk 3</a></li>
+                            <li class="navbar__position__menu__item"><a href="#">Cikk 4</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="navbar__position__menu__item"><a href="#">Ugyfelszolgalat</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="row">
+
+            <div class="logo-stripe col-btm-12">
+                <div class="row">
+
+                    <div class="col-btm-3">
+                        <div class="logo-stripe__logo">
+                            <img class="logo-stripe__logo__img" src="/public/img/logo/mini-logo-100.png" alt=""> 
+                        </div>
+                    </div>
+
+                    <div class="col-btm-8">
+                        <div class="logo-stripe__brand">
+                            <h3 class="logo-stripe__brand__site-name">ausztriaiallas.hu</h3>
+                            <h4 class="logo-stripe__brand__email">info@ausztriaiallas.hu</h4>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <header class="jumbotron">
+        <picture class="jumbotron__pictures">
+                <source srcset="/public/img/jumbotron/jumbotron-1650-525.jpg" media="(min-width: 1200px)">
+                <source srcset="/public/img/jumbotron/jumbotron-1200-409.jpg" media="(min-width: 992px)">
+                <source srcset="/public/img/jumbotron/jumbotron-992-438.jpg" media="(min-width: 768px)">
+                <source srcset="/public/img/jumbotron/jumbotron-768-403.jpg" media="(min-width: 647px)">
+                <source srcset="/public/img/jumbotron/jumbotron-768-486.jpg" media="(min-width: 576px)">
+                <source srcset="/public/img/jumbotron/jumbotron-700-381.jpg" media="(min-width: 419px)">
+                <img class="jumbotron__pictures__img" srcset="/public/img/jumbotron/jumbotron-580-350.jpg">
         </picture>
-        <div class="slogen">
-            <div class="slogen__relative-container">
-                <div class="slogen__relative-container__h3">360 ezret Ausztriaban vendeglatoskent?<br>Megcsinaljuk Neked!</div>
-                <div class="slogen__relative-container__background"></div>
+
+        <div class="brand">
+            <div class="brand__logo">
+                <div class="brand__logo__background"></div>
+                <img class="brand__logo__png" src="/public/img/logo/logo-200.png" alt="ausztriai-allas-logo">
+            </div>
+
+            <div class="brand__slogen">
+                <div class="brand__slogen__background"></div>
+                <div class="brand__slogen__h3">360 ezret Ausztriaban vendeglatoskent?<br>Megcsinaljuk Neked!</div>
             </div>
         </div>
     </header>
@@ -28,33 +96,40 @@
 
             <div class="info-feed col-btm-12 col-gutter-z-btm-both col-gutter-s-sm-both col-md-8 col-gutter-n-md-both">
                 
-                <div class="post fasz">
+                <div class="post">
                     <div class="post__container">
-                        <div class="post__header">
-                            <h3 class="post__header__h3 post__header__h3--centered">Itt Egy lehetoseg arra, hogy elhelyezkedj Ausztriaban</h3>
+                        <div class="post__container__header">
+                            <h3 class="post__container__header__h3 post__container__header__h3--centered">Itt Egy lehetoseg arra, hogy elhelyezkedj Ausztriaban</h3>
                         </div>
 
-                        <div class="post__body">
-                            <p class="post__body__p post__body__p--justified">Kérlek, hogy most pár percre csak rám figyelj, mert ez egy komoly lehetőség. Ha hiszed, ha nem, akár egy-két héten belül Ausztriában dolgozhatsz egy szállodában, mint mosogató/konyhai kisegítő/szobalány/szakács/felszolgáló. Biztos lenne hozzá kedved, hiszen ezért jelentkeztél hozzánk...</p>
-                            <p class="post__body__p post__body__p--justified">Vágjunk is bele, mert nem szeretném az idődet rabolni!</p>
-                            <p class="post__body__p post__body__p--justified">Ha legalább a megértetés szintjén kommunikálsz németül és akkor sem futamodsz meg, ha telefonon kell egy osztrák munkaadóval beszélgetned, akkor velünk biztosan célba érsz!</p>
+                        <div class="post__container__body clearfix">
+                            <p class="post__container__body__p post__container__body__p--justified">Kérlek, hogy most pár percre csak rám figyelj, mert ez egy komoly lehetőség. Ha hiszed, ha nem, akár egy-két héten belül Ausztriában dolgozhatsz egy szállodában, mint mosogató/konyhai kisegítő/szobalány/szakács/felszolgáló. Biztos lenne hozzá kedved, hiszen ezért jelentkeztél hozzánk...</p>
+                            <div class="post__container__body__vector">
+                                <div class="post__container__body__vector__chef-n post__container__body__vector__chef-n--higher"></div>
+                            </div>
+                            <p class="post__container__body__p post__container__body__p--justified">Vágjunk is bele, mert nem szeretném az idődet rabolni!</p>
+                            <p class="post__container__body__p post__container__body__p--justified">Ha legalább a megértetés szintjén kommunikálsz németül és akkor sem futamodsz meg, ha telefonon kell egy osztrák munkaadóval beszélgetned, akkor velünk biztosan célba érsz!</p>
                         </div>
                     </div>
                 </div> <!-- post end -->
 
                 <div class="post">
                     <div class="post__container">
-                        <div class="post__header">
-                            <h3 class="post__header__h3">Itt Egy lehetoseg arra, hogy elhelyezkedj Ausztriaban</h3>
+                        <div class="post__container__header">
+                            <h3 class="post__container__header__h3 post__container__header__h3--centered">Itt Egy lehetoseg arra, hogy elhelyezkedj Ausztriaban</h3>
                         </div>
 
-                        <div class="post__body">
-                            <p class="post__body__p">Kérlek, hogy most pár percre csak rám figyelj, mert ez egy komoly lehetőség. Ha hiszed, ha nem, akár egy-két héten belül Ausztriában dolgozhatsz egy szállodában, mint mosogató/konyhai kisegítő/szobalány/szakács/felszolgáló. Biztos lenne hozzá kedved, hiszen ezért jelentkeztél hozzánk...</p>
-                            <p class="post__body__p">Vágjunk is bele, mert nem szeretném az idődet rabolni!</p>
-                            <p class="post__body__p">Ha legalább a megértetés szintjén kommunikálsz németül és akkor sem futamodsz meg, ha telefonon kell egy osztrák munkaadóval beszélgetned, akkor velünk biztosan célba érsz!</p>
+                        <div class="post__container__body clearfix">
+                            <p class="post__container__body__p post__container__body__p--justified">Kérlek, hogy most pár percre csak rám figyelj, mert ez egy komoly lehetőség. Ha hiszed, ha nem, akár egy-két héten belül Ausztriában dolgozhatsz egy szállodában, mint mosogató/konyhai kisegítő/szobalány/szakács/felszolgáló. Biztos lenne hozzá kedved, hiszen ezért jelentkeztél hozzánk...</p>
+                            <div class="post__container__body__vector">
+                                <div class="post__container__body__vector__waiter-n post__container__body__vector__waiter-n--higher"></div>
+                            </div>
+                            <p class="post__container__body__p post__container__body__p--justified">Vágjunk is bele, mert nem szeretném az idődet rabolni!</p>
+                            <p class="post__container__body__p post__container__body__p--justified">Ha legalább a megértetés szintjén kommunikálsz németül és akkor sem futamodsz meg, ha telefonon kell egy osztrák munkaadóval beszélgetned, akkor velünk biztosan célba érsz!</p>
                         </div>
                     </div>
                 </div> <!-- post end -->
+
             </div> <!-- info-feed end -->
 
 
@@ -84,7 +159,7 @@
 
                 <div class="col-btm-12 col-xs-4 col-md-offset-1 col-gutter-md-right">
                     <div class="footer__info-item">
-                        <img class="footer__info-item__img" src="/public/img/logo.png" alt="logo">  
+                        <img class="footer__info-item__img" src="/public/img/logo/logo.png" alt="logo">  
                     </div>
                 </div>
 
@@ -113,7 +188,7 @@
         </div> <!-- contianer end -->
     </footer>
 
-    <div class="modal" style="display: none;">
+    <div class="modal">
         <div class="container-fluid">
             <div class="row">
                 
@@ -130,6 +205,10 @@
             </div>
         </div>
     </div>
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+  integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+  crossorigin="anonymous"></script>
+<script src="/public/js/home-page-bundled.js"></script>
 </body>
 </html>

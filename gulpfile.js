@@ -12,23 +12,30 @@ const gulpPostcss = require("gulp-postcss"),
 	  gulp = require('gulp');
       browserSync = require('browser-sync');
 
-let homePage = {
+let homePageCss = {
     cssSrcFile : "app/front-end-tmp/css/home-page-unbundled.css",
     bundledCssFileName : 'home-page-bundled.css',
     bundledCssFileDest : 'app/public/css/'
 }
 
-let bundleJavascriptI = 0, 
-    bundleCssI = 0,
-    reloadHtmlI = 0; 
+let homePageJs = {
+    jsSrcFile : "app/front-end-tmp/js/home-page-unbundled.js",
+    bundledJsFileName : 'home-page-bundled.js',
+    bundledJsFileDest : 'app/public/js/'
+}
 
-bundleCss(homePage);
+let reloadHtmlI = 0, 
+    bundleCssI = 0,
+    bundleJsI = 0;
+
+bundleCss(homePageCss);
+bundleJs(homePageJs);
 
 gulp.task('default', () => {
     browserSync.init({ 
         notify:false,
         server: {
-            baseDir: "/home/sandor/Documents/on-going-projects/austria-recruitment/app/"
+            baseDir: "/home/sandor/Documents/ongoing-projects/austria-recuritment/app"
         }   
     });
 
@@ -46,16 +53,23 @@ gulp.task('default', () => {
         bundleCssI++;
         console.log('bundle-css cycles: ' + bundleCssI);
         
-        bundleCss(homePage); 
+        bundleCss(homePageCss); 
+    });
+
+    gulp.watch('./app/front-end-tmp/js/**/**/*.js', function() {
+        browserSync.reload();
+
+        bundleJsI++;
+        console.log('bundle-js cycles: ' + bundleCssI);
+        
+        bundleJs(homePageJs); 
     });
 });
 
 
 function bundleCss(fileForPageObj){
-    let cssSrcFile = fileForPageObj.cssSrcFile
-    let bundledCssFileName = fileForPageObj.bundledCssFileName
-    let bundledCssFileDest = fileForPageObj.bundledCssFileDest
-
+    let {cssSrcFile, bundledCssFileName, bundledCssFileDest} = fileForPageObj;
+    
     return gulp.src(cssSrcFile)
     .pipe(gulpPostcss([
         postcssImport,
@@ -76,14 +90,15 @@ function bundleCss(fileForPageObj){
     .pipe(gulp.dest(bundledCssFileDest))
 }
 
-// gulp.task('bundle-sign-in-page-javascript', function() {
-//     console.log('bundle-sign-in-page-javascript');
-//     return browserify(signInPagejsSrcFile)
-//         .bundle()
-//         .on('error', function(errorInfo){
-//    		console.log( errorInfo.toString() )
-//    		this.emit('end');
-//    		})
-//         .pipe(source(signInPagebundledJsSrcFileName))
-//         .pipe(gulp.dest(signInPagebundledJsSrcFileDest));
-// });
+function bundleJs(fileForPageObj) {
+    let {jsSrcFile, bundledJsFileName, bundledJsFileDest} = fileForPageObj;
+
+    return browserify(jsSrcFile)
+        .bundle()
+        .on('error', function(errorInfo){
+   		console.log( errorInfo.toString() )
+   		this.emit('end');
+   		})
+        .pipe(source(bundledJsFileName))
+        .pipe(gulp.dest(bundledJsFileDest));
+}

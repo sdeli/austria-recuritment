@@ -1,0 +1,70 @@
+.logo-stripe {
+	width: 100%;
+	padding-left: 0.6rem;
+	padding-right: 0.6rem;
+	border-top: 3px solid $textOrange;
+	border-bottom: 3px solid $textOrange;
+
+	&__brand {
+		display: inline-block;
+		vertical-align: top;
+
+		&__site-name {
+			display: block;
+			padding: 0.0125rem 0 0.0125rem 0;
+			margin: 0;
+			@mixin fontPoppins;
+			color: $textOrange;
+			text-shadow: 1px 1px white, 2px 2px white;
+		}
+		
+		&__email {
+			display: block;
+			padding: 0.0125rem 0 0 0;
+			margin: 0;
+			@mixin fontPoppins;
+			color: $textOrange;
+		}
+	}
+
+
+
+	&__logo {
+		display: inline-block;
+		height: 3.5rem;
+		&__img {
+			height: 100%;
+			display: inline-block;
+			margin-bottom: -5px;
+		}
+	}
+}
+
+
+@media (min-width: 419px) {
+	.logo-stripe {
+		padding-left: 1.5rem;
+
+		&__brand {
+			&__site-name {
+				font-size: 1.5rem;
+				padding-left: 0.625rem;
+			}
+
+			&__email {
+				font-size: 1.115rem;
+				padding-left: 0.625rem;
+			}
+		}
+		
+		&__logo {
+			height: 4.5rem;
+		}
+	}
+}
+
+@media (min-width: 576px) {
+	.logo-stripe {
+		display: none;
+	}
+}

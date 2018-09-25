@@ -1,0 +1,8 @@
+div {
+    font-family: myFirstFont;
+}
+
+body {
+    background-color: $mainBlue;
+    position: relative;
+}

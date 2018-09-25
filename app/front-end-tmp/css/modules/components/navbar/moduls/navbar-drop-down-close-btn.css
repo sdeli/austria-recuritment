@@ -1,0 +1,34 @@
+.navbar__position__menu__close-btn {
+	margin: 0.3125rem 0;
+    padding: 0.3125rem 0;
+	background: $mainBlue;
+	border-radius: 0.25rem;
+	display: block;
+	margin: 0.3125rem 0;
+	padding: 0.3125rem 0;
+	border-radius: 0.25rem;
+	height: 1.75rem;
+
+	&__icon {
+		position: relative;
+	    width: 1.6875rem;
+	    left: 50%;
+	    transform: translateX(-50%);
+
+		&::before {
+			@mixin close-btn-bars;
+			transform: rotate(50deg);
+		}
+		
+		&::after {
+			@mixin close-btn-bars;
+			transform: rotate(-50deg);
+		}
+	}
+}
+
+@media(min-width: 576px) {
+	.navbar__position__menu__close-btn {
+		display: none;
+	}
+}

@@ -1,0 +1,105 @@
+.modal {
+    display: none;
+    background: $mainBlue;
+    position: absolute;
+    width:97%;
+    top: 500px;
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 1px 1px rgba(0,0,0,0.33);
+    border-radius: 6px;
+    max-width: 650px;
+    @mixin fontPoppins;
+
+    &__head {
+        width: 100%;
+        padding: 0 0.375rem;
+        margin-top: 0.375rem;
+        margin-bottom: 0.375rem;
+        box-sizing: border-box;
+        position: relative;
+        @mixin fontPoppins;
+
+        &__h3 {
+            display: inline-block;
+            margin: 0;
+            color: $textOrange;
+            text-shadow: 1px 1px white, 2px 2px white;
+            max-width: 96%;
+            float: left;
+
+            &--centered {
+                text-align: center;
+            }
+        }
+
+        &__p {
+            display: inline-block;
+            max-width: 5%;
+            margin: 0;
+            padding: 0;
+            max-width: 3%;
+            float: right;
+            color: #b1dbe4;
+            font-size: 1.17rem;
+            font-weight: bold;
+        }
+    }
+
+    &__body {
+        width: 100%;
+        margin-bottom: 0.475rem;
+        padding-right: 2px;
+        box-sizing: border-box;
+        @mixin fontPoppins;
+
+        &__btn {
+            background: white;
+            color: $textOrange;
+            top: 0px; 
+            left: 0px;
+            text-shadow: 0 1px 1px rgba(0,0,0,0.33);
+            display: block;
+            font-size: 1.17em;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 1px 1px white,
+                        2px 2px white;
+        }
+    }
+}
+
+@media (min-width: 419px) {
+    .modal {
+        &__head {
+            margin-top: 0.6375rem;
+            margin-bottom: 0.6375rem;
+
+            &__h3 {
+                font-size: 1.4rem;
+            }
+
+            &__p {
+                margin-right: -0.3rem;
+            }
+        }
+
+        &__body {
+            margin-bottom: 0.9375rem;
+
+            &__btn {
+                font-size: 1.3rem;
+            }
+        }
+    }    
+}
+
+@media (min-width: 419px) {
+    .modal {
+        &__head {
+            &__p {
+                font-size: 1.37rem;
+            }
+        }
+    }    
+}

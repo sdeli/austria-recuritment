@@ -1,0 +1,41 @@
+@define-mixin mobileNavBtnStyle{ 
+    font-family: 'Poppins', sans-serif;
+    margin: 0.3125rem 0;
+    padding: 0.3125rem 0;
+	background: $mainBlue;
+	border-radius: 4px;
+	text-align: center;
+	display: block;
+	margin: 0.3125rem 0;
+	padding: 0.3125rem 0;
+	border-radius: 4px;
+	font-weight: bold;
+	font-size: 1.1rem;
+	text-shadow: 1px 1px white, 2px 2px white;
+	color: $textOrange;
+}
+
+@define-mixin desktopNavBtnStyle{ 
+    margin: 0;
+	font-size: 1.05rem;
+	padding: 0.525rem 0.3375rem;
+	display: inline-block;
+	color: white;
+	font-weight: normal;
+	background: unset;
+	text-shadow: unset;
+	border-radius: unset;
+	background: unset;
+}
+
+@define-mixin close-btn-bars {
+	content:'';
+	display: block;
+	height: 6px;
+	width: 33px;
+	border-radius: 6px;
+	background: #f35f57;
+	position: absolute;
+	top: 11px;
+	left: -5px;
+}
